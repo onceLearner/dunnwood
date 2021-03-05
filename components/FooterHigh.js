@@ -2,8 +2,8 @@ import React from 'react'
 
 const FooterHigh = () => {
     return (
-        <div className="flex  flex-wrap justify-between md:p-8 md:py-40 w-full  space-y-px-20     text-white " style={{ backgroundColor: "#143923" }}  >
-            <div className="  flex flex-col  p-8 mb-10 space-y-8 md:w-1/2 mt-4">
+        <div className="flex  flex-wrap justify-between md:p-8 md:py-40 w-full  space-y-8    text-white " style={{ backgroundColor: "#143923" }}  >
+            <div className="  flex flex-col  px-8  mb-10 space-y-6 md:w-1/2 mt-10">
                 <h2 className="text-3xl  font-bold text-gray-50">
                     Apartments available from $1,400 per month.
                 </h2>

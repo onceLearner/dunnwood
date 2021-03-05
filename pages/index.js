@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Amenities from '../components/Amenities'
 import FooterHigh from '../components/FooterHigh'
 import FooterLow from '../components/FooterLow'
 import styles from '../styles/Home.module.css'
@@ -22,6 +23,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
+        <Amenities />
         <FooterHigh />
         <FooterLow />
 
