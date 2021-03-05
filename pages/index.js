@@ -19,11 +19,11 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <p className="text-2xl">hello world</p>
+        <Amenities />
       </main>
 
       <footer className={styles.footer}>
-        <Amenities />
+
         <FooterHigh />
         <FooterLow />
 
