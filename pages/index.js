@@ -3,7 +3,9 @@ import Image from "next/image"
 import Amenities from '../components/Amenities'
 import FooterHigh from '../components/FooterHigh'
 import FooterLow from '../components/FooterLow'
+import Navigation from '../components/Navigation'
 import styles from '../styles/Home.module.css'
+import MainV1 from "../public/mainsd.mp4"
 
 
 
@@ -15,12 +17,29 @@ export default function Home() {
         <title> DunnwooGreen</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav>
-        <p className="text-red-100">he </p>
+      <nav className="w-full">
+        <Navigation />
       </nav>
 
       <main className={styles.main}>
-        <div className="flex  flex-col  space-y-2 p-7 md:px-12">
+        <video autoPlay
+          loop
+          muted
+          style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            left: "50%",
+            top: "50%",
+            objectFit: "cover",
+            transform: "translate(-50%,-50%)",
+            zIndex: "-1"
+          }}
+        >
+          <source src={MainV1} type="video/mp4" />
+        </video>
+
+        <video className="flex  flex-col  space-y-2 p-7 md:px-12">
           <h2 className="text-2xl font-semibold mb-2 md:mb-7 text-gray-800">
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
@@ -31,7 +50,7 @@ export default function Home() {
           <p className="text-gray-600  py-2  ">
             As you learn more, we hope you will become equally as excited, so stay tuned and we will provide additional details in the coming months!
           </p>
-        </div>
+        </video>
 
         <div className="  relative  w-full   mb-16     " style={{ height: "92vh" }}>
           <Image
@@ -50,7 +69,7 @@ export default function Home() {
         <Amenities />
       </main>
 
-      <footer className={styles.footer}>
+      <footer className={styles.footer} id="AMENITIES">
 
         <FooterHigh />
         <FooterLow />
