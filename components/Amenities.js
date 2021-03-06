@@ -34,7 +34,7 @@ const Amenities = () => {
                 <div className=" hidden md:flex flex-wrap    md:w-1/2 gap-7">
                     {
                         imgArray.map(Img => (
-                            <Image src={Img} className="w-20" width="280" quality={0.2} height="150" />
+                            <Image src={Img} className="w-20" width="280" quality={1} height="150" />
 
                         ))
                     }
