@@ -7,6 +7,7 @@ import Navigation from '../components/Navigation'
 import styles from '../styles/Home.module.css'
 import MainV1 from "../public/mainsd.mp4"
 import MainV2 from "../public/mainsd2.mp4"
+import MainV3 from "../public/mainv1.mp4"
 
 
 
@@ -23,7 +24,7 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <div className="  w-full   transform scale-y-150   " style={{ zIndex: "-1" }}>
+        <div className="  w-full   transform scale-y-125  opacity-90  " style={{ zIndex: "-1" }}>
           <video autoPlay
             loop
             muted
@@ -31,16 +32,16 @@ export default function Home() {
             style={{
               position: "relative",
               width: "100%",
-              height: "60vh",
+              height: "64vh",
               left: "0",
               top: "0",
               padding: "none",
               objectFit: "cover",
-              transform: "translate(-0%,-8%)",
+              transform: "translate(-0%,-18%)",
               zIndex: "-1"
             }}
           >
-            <source src={MainV2} type="video/mp4" />
+            <source src={MainV3} type="video/mp4" />
           </video>
         </div>
 

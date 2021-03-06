@@ -8,7 +8,7 @@ const tabs = ["OVERVIEW", "NEIGHBORHOOD", "AMENITIES", "CONTACT"]
 const Navigation = () => {
     const [visble, setVisible] = React.useState(false)
     return (
-        <div className="flex-0 flex   justify-between items-center  p-4  ">
+        <div className="flex-0 flex   justify-between items-center  pr-4  ">
             <Link href="/" >
 
                 <Image src="/logo.png" width="130" className="cursor-pointer" height="100" priority />
