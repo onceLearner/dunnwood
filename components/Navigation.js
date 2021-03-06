@@ -8,21 +8,21 @@ const tabs = ["OVERVIEW", "NEIGHBORHOOD", "AMENITIES", "CONTACT"]
 const Navigation = () => {
     const [visble, setVisible] = React.useState(false)
     return (
-        <div className="flex-0 flex   justify-between items-center   pr-4  ">
-            <Link href="/" >
+        <div className="flex-0 flex fixed z-10 top-0 w-full  justify-between items-center   pr-4  ">
 
-                <Image src="/logo.png" width="130" className="cursor-pointer" height="100" priority />
 
-            </Link>
+            <Image src="/logo.png" width="130" className="cursor-pointer" height="100" layout="intrinsic" priority />
+
+
             <div>
-                <nav className=" md:flex   gap-12 hidden     ">
+                <nav className=" md:flex   gap-12 hidden    ">
 
 
 
                     {tabs.map(tab =>
 
                         <tab key={tab} href={`#${tab}`}  >
-                            <button className={` text-gray-100 hover:text-white  focus:outline-none transition duration-150    font-medium cursor-pointer    `} style={{ fontFamily: "Montserrat", fontWeight: "600", fontSize: "15px" }}> {tab}</button>
+                            <button className={` text-gray-100 hover:text-white  focus:outline-none transition duration-150    font-medium cursor-pointer    `} style={{ fontFamily: "Belleza", fontSize: " 18px", fontWeight: "700" }}> {tab}</button>
                         </tab>
 
                     )}
@@ -36,8 +36,8 @@ const Navigation = () => {
                     </svg>
 
                 </div>
-                <div className={visble ? `z-10 absolute bg-black right-0 left-0 top-0 h-full  p-2 ` : `hidden`}>
-                    <p className="p-2 absolute right-0 text-gray-100 text-lg font-bold cursor-pointer " onClick={() => setVisible(false)}>x </p>
+                <div className={visble ? `z-10 absolute bg-black right-0 left-0 top-0 h-screen  p-2 ` : `hidden`}>
+                    <p className="p-4 absolute right-0 text-gray-100 text-lg font-bold cursor-pointer " onClick={() => setVisible(false)}>x </p>
 
                     <div className="flex flex-col justify-center items-center gap-6 mt-40 ">
                         {tabs.map(tab =>

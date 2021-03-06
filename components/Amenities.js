@@ -7,7 +7,7 @@ import { imgArray, paragArray } from "./data/amenities"
 const Amenities = () => {
     return (
         <div className="flex flex-col  items-center "  >
-            <div className="text-2xl text-gray-900 leading-10 font-semibold p-4 md:mb-4 text-center  md:w-3/5">
+            <div className="text-3xl text-gray-900 leading-10 p-4 md:mb-4 text-center  md:w-3/5" style={{ fontFamily: "Belleza" }}>
                 COME HOME TO DUNNWOOD GREEN WHERE YOU CAN RELAX IN THE COMFORT OF A NEW HOME WITH THE FLEXIBILITY TO WORK, TRAVEL AND EXPLORE.
 
             </div>
@@ -16,7 +16,7 @@ const Amenities = () => {
                     {paragArray.map(parag => (
                         <div className="flex items-start space-y-5 space-x-3   ">
                             <span className="font-bold text-3xl transform translate-y-2 ">.</span>
-                            <p className="text-gray-800 leading-7 ">{parag}</p>
+                            <p className="text-black leading-7 ">{parag}</p>
                         </div>
                     ))}
                 </div>

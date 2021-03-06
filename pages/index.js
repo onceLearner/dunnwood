@@ -51,14 +51,14 @@ export default function Home() {
 
 
         <div className="flex  flex-col  transform -translate-y-10  space-y-2 p-7 md:px-12 mt-12 ">
-          <h2 className="text-2xl font-semibold mb-2 md:mb-7 text-gray-800">
+          <h2 className="  mb-2 md:mb-7 text-gray-800 " style={{ fontFamily: "Belleza", fontSize: " 28px" }}>
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
 
-          <p className="text-gray-600  leading-6">
+          <p className="text-black  leading-6" style={{ fontSize: "12pt", fontWeight: "300   " }}>
             Morrell Builders is thrilled to announce our newest project! Dunnwood Green will provide the same quality, value and innovation Rochester home buyers have revered for three generations. Three luxury buildings offering single and multiple bedroom residences surrounded by a golf course and wooded trails.  A community club house featuring your favorite coffee bar, a beloved pub, a comfy library, and a state-of-the-art fitness center. Our goal is to energize and elevate your lifestyle.
           </p>
-          <p className="text-gray-600  py-2  ">
+          <p className="text-black  py-2  " style={{ fontSize: "16px", fontWeight: "300" }}>
             As you learn more, we hope you will become equally as excited, so stay tuned and we will provide additional details in the coming months!
           </p>
         </div>
@@ -70,11 +70,11 @@ export default function Home() {
             src="/mainimg.jpg"
             layout="fill"
             objectFit="cover"
-            quality={40}
+            quality={70}
             priority
           />
           <div className=" flex flex-col items-center space-y-4  absolute top-1/3 left-12 md:left-72 text-white ">
-            <h3 className="text-xl md:text-4xl font-bold">NEIGHBORHOOD</h3>
+            <h3 className="text-xl md:text-6xl " style={{ fontFamily: "Belleza" }}>NEIGHBORHOOD</h3>
             <p className="text-lg">IN THE HEART OF ROCHESTER-SURROUNDED BY</p>
             <p className="text-center text-lg">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
           </div>
