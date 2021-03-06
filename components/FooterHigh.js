@@ -24,7 +24,8 @@ const FooterHigh = () => {
                     Send
                 </button>
             </div>
-            <div className="md:w-1/2 w-full " >
+            <div className="md:w-1/2 w-full  transform -translate-y-8  " >
+                <div className="absolute z-20  w-full h-16 " style={{ backgroundColor: "#143923" }}> </div>
                 <iframe className="w-full" src="https://www.google.com/maps/d/u/0/embed?mid=1MPQ8gtxxOXaABvzxikXooGmWgnQIvx0R" width="100%" height="600px"></iframe>
 
             </div>
