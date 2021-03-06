@@ -6,6 +6,7 @@ import FooterLow from '../components/FooterLow'
 import Navigation from '../components/Navigation'
 import styles from '../styles/Home.module.css'
 import MainV1 from "../public/mainsd.mp4"
+import MainV2 from "../public/mainsd2.mp4"
 
 
 
@@ -22,25 +23,28 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <video autoPlay
-          loop
-          muted
+        <div className="  w-full   transform scale-y-150   " style={{ zIndex: "-1" }}>
+          <video autoPlay
+            loop
+            muted
+            className=""
+            style={{
+              position: "relative",
+              width: "100%",
+              height: "60vh",
+              left: "0",
+              top: "0",
+              padding: "none",
+              objectFit: "cover",
+              transform: "translate(-0%,-8%)",
+              zIndex: "-1"
+            }}
+          >
+            <source src={MainV2} type="video/mp4" />
+          </video>
+        </div>
 
-          style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
-            left: "50%",
-            top: "50%",
-            objectFit: "cover",
-            transform: "translate(-50%,-50%)",
-            zIndex: "-1"
-          }}
-        >
-          <source src={MainV1} type="video/mp4" />
-        </video>
-
-        <video className="flex  flex-col  space-y-2 p-7 md:px-12">
+        <div className="flex  flex-col   space-y-2 p-7 md:px-12 mt-40">
           <h2 className="text-2xl font-semibold mb-2 md:mb-7 text-gray-800">
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
@@ -51,7 +55,7 @@ export default function Home() {
           <p className="text-gray-600  py-2  ">
             As you learn more, we hope you will become equally as excited, so stay tuned and we will provide additional details in the coming months!
           </p>
-        </video>
+        </div>
 
         <div className="  relative  w-full   mb-16     " style={{ height: "92vh" }}>
           <Image
