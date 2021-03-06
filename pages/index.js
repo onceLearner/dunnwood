@@ -10,6 +10,7 @@ import MainV1 from "../public/mainsd.mp4"
 import MainV2 from "../public/mainsd2.mp4"
 import MainV3 from "../public/mainv11.mp4"
 import MainV4 from "../public/mainv112.mp4"
+import { imgArray } from "../components/data/amenities"
 
 
 
@@ -36,11 +37,13 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <div className="     border-purple-700 w-full    bg-black bg-opacity-25" style={{ height: "92vh" }}>
-          <video autoPlay
+        <div className="     border-purple-700 w-full    bg-black bg-opacity-30" style={{ height: "92vh" }}>
+          <video
+
+            autoplay="autoplay"
             loop
             muted
-            className=" "
+            poster={imgArray[0]}
             style={{
 
               position: "relative",
@@ -56,7 +59,9 @@ export default function Home() {
             }}
           >
             <source src={MainV4} type="video/mp4" />
+
           </video>
+          {/* <iframe className="w-full h-full" src="https://www.youtube.com/embed/Cjeu-YZA9c4?autoplay=1&showinfo=0&controls=0"></iframe> */}
 
 
         </div>
