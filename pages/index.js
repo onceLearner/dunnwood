@@ -36,7 +36,7 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <div className="  overflow-hidden transform scale-y-150 scale-x-125     border-purple-700 w-full    bg-black bg-opacity-25" style={{ height: "92vh" }}>
+        <div className="     border-purple-700 w-full    bg-black bg-opacity-25" style={{ height: "92vh" }}>
           <video autoPlay
             loop
             muted
@@ -55,7 +55,7 @@ export default function Home() {
               zIndex: "-1"
             }}
           >
-            <source src={MainV4} type="video/mp4" />
+            <source src={MainV3} type="video/mp4" />
           </video>
 
 
@@ -75,7 +75,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div ref={NeighboorhoodRef} className="  relative  w-full   mb-4     " style={{ height: "92vh" }}>
+        <div ref={NeighboorhoodRef} className="  relative  w-full   mb-6     " style={{ height: "92vh" }}>
           <Image
             className="  "
             alt="Mountains"
