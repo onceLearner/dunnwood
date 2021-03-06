@@ -9,6 +9,7 @@ import styles from '../styles/Home.module.css'
 import MainV1 from "../public/mainsd.mp4"
 import MainV2 from "../public/mainsd2.mp4"
 import MainV3 from "../public/mainv11.mp4"
+import MainV4 from "../public/mainv112.mp4"
 
 
 
@@ -35,8 +36,8 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <div className="  overflow-hidden    border-purple-700 w-full    bg-black bg-opacity-25" style={{ height: "92vh" }}>
-          {/* <video autoPlay
+        <div className="  overflow-hidden transform scale-y-150 scale-x-125     border-purple-700 w-full    bg-black bg-opacity-25" style={{ height: "92vh" }}>
+          <video autoPlay
             loop
             muted
             className=" "
@@ -54,24 +55,8 @@ export default function Home() {
               zIndex: "-1"
             }}
           >
-            <source src={"https://player.vimeo.com/video/491643316?autoplay=1&loop=1&autopause=0&api=1&controls=0&muted=1?playsinline=0"} type="video/mp4" />
-          </video> */}
-          <iframe className="  "
-            style={{
-              position: "relative",
-              width: "130%",
-              height: "140vh",
-              overflow: "hidden",
-              left: "0",
-              top: "0",
-              padding: "none",
-              objectFit: "cover",
-              transform: "translate(-5%,-8%)",
-              zIndex: "-1"
-
-            }}
-
-            src="https://player.vimeo.com/video/491643316?autoplay=1&loop=1&autopause=0&api=1&controls=0&muted=1?playsinline=0" ></iframe>
+            <source src={MainV4} type="video/mp4" />
+          </video>
 
 
         </div>
