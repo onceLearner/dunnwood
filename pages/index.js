@@ -8,7 +8,7 @@ import Navigation from '../components/Navigation'
 import styles from '../styles/Home.module.css'
 import MainV1 from "../public/mainsd.mp4"
 import MainV2 from "../public/mainsd2.mp4"
-import MainV3 from "../public/mainv1.mp4"
+import MainV3 from "../public/mainv11.mp4"
 
 
 
@@ -35,33 +35,33 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <div className="  relative  w-full           " style={{ height: "77vh" }}>
+        <div className="     border-purple-700 w-full    bg-black bg-opacity-25" style={{ height: "92vh" }}>
           <video autoPlay
             loop
             muted
-            className="transform -translate-y-60 md:-translate-y-64  "
+            className=" "
             style={{
 
               position: "relative",
               width: "100%",
-              height: "138%",
+              height: "100vh",
+              overflow: "hidden",
               left: "0",
               top: "0",
               padding: "none",
               objectFit: "cover",
-              // transform: "translate(-0%,-28%)",
+              transform: "translate(-0%,-8%)",
               zIndex: "-1"
             }}
           >
             <source src={MainV3} type="video/mp4" />
           </video>
-          <div className="  absolute bottom-0  text-white w-full   h-1/6 transform translate-y-12   bg-white ">
-            dd
-          </div>
+
+
         </div>
 
 
-        <div ref={OverviewRef} className="flex  flex-col  transform -translate-y-10  space-y-2 p-7 md:px-12 mt-12 ">
+        <div ref={OverviewRef} className="flex  flex-col   transform -translate-y-10  space-y-2 p-7 md:px-12 mt-40 ">
           <h2 className="  mb-2 md:mb-7 text-3xl text-gray-800 " style={{ fontFamily: "Belleza" }}>
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
@@ -74,7 +74,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div ref={NeighboorhoodRef} className="  relative  w-full   mb-16      " style={{ height: "92vh" }}>
+        <div ref={NeighboorhoodRef} className="  relative  w-full   mb-4     " style={{ height: "92vh" }}>
           <Image
             className="  "
             alt="Mountains"

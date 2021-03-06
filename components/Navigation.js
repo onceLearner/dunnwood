@@ -20,7 +20,7 @@ const Navigation = (props) => {
 
 
     return (
-        <div className="flex-0 flex fixed z-10 top-0 w-full  justify-between items-center   pr-4  ">
+        <div className="flex-0 flex fixed z-10 top-0 w-full    justify-between items-center   pr-4  ">
 
 
             <Image onClick={() => olscrlToElement()} src="/logo.png" width="130" className="cursor-pointer" height="100" layout="intrinsic" priority />
@@ -42,8 +42,8 @@ const Navigation = (props) => {
 
 
                 </nav>
-                <div className="md:hidden cursor-pointer hover:text-red-500" onClick={() => setVisible(true)}>
-                    <svg className="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="md:hidden cursor-pointer mr-4 hover:text-red-500" onClick={() => setVisible(true)}>
+                    <svg className="h-7 w-7 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
                     </svg>
 
