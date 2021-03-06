@@ -5,13 +5,25 @@ import Image from "next/image"
 
 const tabs = ["OVERVIEW", "NEIGHBORHOOD", "AMENITIES", "CONTACT"]
 
-const Navigation = () => {
+
+
+function handleBackClick(ref) {
+    console.log(ref)
+    ref.refName.current.scrollIntoView({ behavior: 'smooth' })
+}
+
+
+
+const Navigation = (props) => {
     const [visble, setVisible] = React.useState(false)
+
+
+
     return (
         <div className="flex-0 flex fixed z-10 top-0 w-full  justify-between items-center   pr-4  ">
 
 
-            <Image src="/logo.png" width="130" className="cursor-pointer" height="100" layout="intrinsic" priority />
+            <Image onClick={() => olscrlToElement()} src="/logo.png" width="130" className="cursor-pointer" height="100" layout="intrinsic" priority />
 
 
             <div>
@@ -21,7 +33,7 @@ const Navigation = () => {
 
                     {tabs.map(tab =>
 
-                        <tab key={tab} href={`#${tab}`}  >
+                        <tab key={tab} onClick={() => { handleBackClick(props.refs.find(elt => elt.tabName == tab)) }}  >
                             <button className={` text-gray-100 hover:text-white  focus:outline-none transition duration-150    font-medium cursor-pointer    `} style={{ fontFamily: "Belleza", fontSize: " 18px", fontWeight: "700" }}> {tab}</button>
                         </tab>
 
@@ -42,7 +54,7 @@ const Navigation = () => {
                     <div className="flex flex-col justify-center items-center gap-6 mt-40 ">
                         {tabs.map(tab =>
 
-                            <a key={tab} href={`#${tab}`} >
+                            <a key={tab} onClick={() => { handleBackClick(props.refs.find(elt => elt.tabName == tab)); setVisible(false) }}>
                                 <button className={` text-gray-100 hover:text-red-500 focus:outline-none transition duration-150   text-3xl  font-extrabold cursor-pointer   `} style={{ fontFamily: "Montserrat" }}> {tab}</button>
                             </a>
 

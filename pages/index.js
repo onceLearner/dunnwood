@@ -1,3 +1,4 @@
+import React, { useRef, useEffect } from "react"
 import Head from 'next/head'
 import Image from "next/image"
 import Amenities from '../components/Amenities'
@@ -13,6 +14,16 @@ import MainV3 from "../public/mainv1.mp4"
 
 
 export default function Home() {
+  const OverviewRef = useRef()
+  const NeighboorhoodRef = useRef()
+  const AmenitiesRef = useRef()
+  const ContactREf = useRef()
+
+  const arrRef = [{ refName: OverviewRef, tabName: "OVERVIEW" }, { refName: NeighboorhoodRef, tabName: "NEIGHBORHOOD" }, { refName: AmenitiesRef, tabName: "AMENITIES" }, { refName: ContactREf, tabName: "CONTACT" }]
+
+
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -20,7 +31,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <nav className="w-full">
-        <Navigation />
+        <Navigation refs={arrRef} />
       </nav>
 
       <main className={styles.main}>
@@ -50,8 +61,8 @@ export default function Home() {
         </div>
 
 
-        <div className="flex  flex-col  transform -translate-y-10  space-y-2 p-7 md:px-12 mt-12 ">
-          <h2 className="  mb-2 md:mb-7 text-gray-800 " style={{ fontFamily: "Belleza", fontSize: " 28px" }}>
+        <div ref={OverviewRef} className="flex  flex-col  transform -translate-y-10  space-y-2 p-7 md:px-12 mt-12 ">
+          <h2 className="  mb-2 md:mb-7 text-gray-800 ">
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
 
@@ -63,7 +74,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="  relative  w-full   mb-16      " style={{ height: "92vh" }}>
+        <div ref={NeighboorhoodRef} className="  relative  w-full   mb-16      " style={{ height: "92vh" }}>
           <Image
             className="  "
             alt="Mountains"
@@ -81,11 +92,13 @@ export default function Home() {
 
         </div>
 
+        <div ref={AmenitiesRef} >
 
-        <Amenities />
+          <Amenities />
+        </div>
       </main>
 
-      <footer className={styles.footer} id="AMENITIES">
+      <footer ref={ContactREf} className={styles.footer} id="AMENITIES">
 
         <FooterHigh />
         <FooterLow />
