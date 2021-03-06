@@ -60,6 +60,7 @@ export default function Home() {
             layout="fill"
             objectFit="cover"
             quality={1}
+            priority
           />
 
 
