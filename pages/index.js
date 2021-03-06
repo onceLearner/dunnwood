@@ -60,8 +60,19 @@ export default function Home() {
               src="/mainimg.jpg"
               layout="fill"
               objectFit="cover"
-              quality={100}
+              quality={2}
             />
+          </div>
+          <div className="flex flex-col items-center space-y-4 text-white transform -translate-y-96">
+            <p className="text-xl font-semibold">
+              NEIGHBORHOOD
+            </p>
+            <p>
+              IN THE HEART OF ROCHESTER-SURROUNDED BY
+
+              
+            </p>
+            <p className="text-center">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
           </div>
 
 
