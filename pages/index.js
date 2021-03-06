@@ -24,20 +24,21 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <div className="  w-full   transform scale-y-125  opacity-90  " style={{ zIndex: "-1" }}>
+        <div className="  relative  w-full        " style={{ height: "92vh" }}>
           <video autoPlay
             loop
             muted
-            className=""
+            className="transform -translate-y-60 md:-translate-y-60  "
             style={{
+
               position: "relative",
               width: "100%",
-              height: "64vh",
+              height: "120%",
               left: "0",
               top: "0",
               padding: "none",
               objectFit: "cover",
-              transform: "translate(-0%,-18%)",
+              // transform: "translate(-0%,-28%)",
               zIndex: "-1"
             }}
           >
@@ -45,7 +46,7 @@ export default function Home() {
           </video>
         </div>
 
-        <div className="flex  flex-col   space-y-2 p-7 md:px-12 mt-40">
+        <div className="flex  flex-col   space-y-2 p-7 md:px-12 ">
           <h2 className="text-2xl font-semibold mb-2 md:mb-7 text-gray-800">
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>

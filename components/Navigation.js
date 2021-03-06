@@ -8,7 +8,7 @@ const tabs = ["OVERVIEW", "NEIGHBORHOOD", "AMENITIES", "CONTACT"]
 const Navigation = () => {
     const [visble, setVisible] = React.useState(false)
     return (
-        <div className="flex-0 flex   justify-between items-center  pr-4  ">
+        <div className="flex-0 flex   justify-between items-center   pr-4  ">
             <Link href="/" >
 
                 <Image src="/logo.png" width="130" className="cursor-pointer" height="100" priority />
@@ -22,7 +22,7 @@ const Navigation = () => {
                     {tabs.map(tab =>
 
                         <tab key={tab} href={`#${tab}`}  >
-                            <button className={` text-gray-50 hover:text-red-500 focus:outline-none transition duration-150    font-medium cursor-pointer    `} style={{ fontFamily: "Montserrat", fontWeight: "600", fontSize: "15px" }}> {tab}</button>
+                            <button className={` text-gray-100 hover:text-white  focus:outline-none transition duration-150    font-medium cursor-pointer    `} style={{ fontFamily: "Montserrat", fontWeight: "600", fontSize: "15px" }}> {tab}</button>
                         </tab>
 
                     )}
@@ -31,7 +31,7 @@ const Navigation = () => {
 
                 </nav>
                 <div className="md:hidden cursor-pointer hover:text-red-500" onClick={() => setVisible(true)}>
-                    <svg className="h-6 w-6 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
                     </svg>
 
