@@ -24,16 +24,16 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <div className="  relative  w-full        " style={{ height: "92vh" }}>
+        <div className="  relative  w-full           " style={{ height: "77vh" }}>
           <video autoPlay
             loop
             muted
-            className="transform -translate-y-60 md:-translate-y-60  "
+            className="transform -translate-y-60 md:-translate-y-64  "
             style={{
 
               position: "relative",
               width: "100%",
-              height: "120%",
+              height: "138%",
               left: "0",
               top: "0",
               padding: "none",
@@ -44,12 +44,13 @@ export default function Home() {
           >
             <source src={MainV3} type="video/mp4" />
           </video>
+          <div className="  absolute bottom-0  text-white w-full   h-1/6 transform translate-y-12   bg-white ">
+            dd
+          </div>
         </div>
-        <div className=" w-full z-50 transform  h-24 -translate-y-40 bg-white">
 
-        </div>
 
-        <div className="flex  flex-col   space-y-2 p-7 md:px-12 ">
+        <div className="flex  flex-col  transform -translate-y-10  space-y-2 p-7 md:px-12 mt-12 ">
           <h2 className="text-2xl font-semibold mb-2 md:mb-7 text-gray-800">
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
@@ -62,20 +63,24 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="  relative  w-full   mb-16     " style={{ height: "92vh" }}>
+        <div className="  relative  w-full   mb-16      " style={{ height: "92vh" }}>
           <Image
             className="  "
             alt="Mountains"
             src="/mainimg.jpg"
             layout="fill"
             objectFit="cover"
-            quality={1}
+            quality={40}
             priority
           />
-
-
+          <div className=" flex flex-col items-center space-y-4  absolute top-1/3 left-12 md:left-72 text-white ">
+            <h3 className="text-xl md:text-4xl font-bold">NEIGHBORHOOD</h3>
+            <p className="text-lg">IN THE HEART OF ROCHESTER-SURROUNDED BY</p>
+            <p className="text-center text-lg">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
+          </div>
 
         </div>
+
 
         <Amenities />
       </main>
