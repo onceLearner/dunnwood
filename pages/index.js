@@ -20,7 +20,7 @@ export default function Home() {
       </nav>
 
       <main className={styles.main}>
-        <div className="flex flex-col  space-y-2 p-7 md:px-12">
+        <div className="flex  flex-col  space-y-2 p-7 md:px-12">
           <h2 className="text-2xl font-semibold mb-2 md:mb-7 text-gray-800">
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
@@ -32,48 +32,17 @@ export default function Home() {
             As you learn more, we hope you will become equally as excited, so stay tuned and we will provide additional details in the coming months!
           </p>
         </div>
-        <div className="  w-full      ">
-          <div className="  relative   w-full  h-72 md:h-full        ">
-            <Image
-              className="  "
-              alt="Mountains"
-              src="/mainimg.jpg"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
-          <div className="  relative md:hidden   w-full h-72 md:h-full        ">
-            <Image
-              className="  "
-              alt="Mountains"
-              src="/mainimg.jpg"
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
-          <div className="  relative md:hidden   w-full h-72 md:h-full  mb-16     ">
-            <Image
-              className="  "
-              alt="Mountains"
-              src="/mainimg.jpg"
-              layout="fill"
-              objectFit="cover"
-              quality={2}
-            />
-          </div>
-          <div className="flex flex-col items-center space-y-4 text-white transform -translate-y-96">
-            <p className="text-xl font-semibold">
-              NEIGHBORHOOD
-            </p>
-            <p>
-              IN THE HEART OF ROCHESTER-SURROUNDED BY
 
-              
-            </p>
-            <p className="text-center">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
-          </div>
+        <div className="  relative  w-full   mb-16     " style={{ height: "92vh" }}>
+          <Image
+            className="  "
+            alt="Mountains"
+            src="/mainimg.jpg"
+            layout="fill"
+            objectFit="cover"
+            quality={1}
+          />
+
 
 
         </div>
@@ -88,6 +57,6 @@ export default function Home() {
 
 
       </footer>
-    </div>
+    </div >
   )
 }
