@@ -36,7 +36,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className="     border-purple-700 w-full    bg-black bg-opacity-25" style={{ height: "92vh" }}>
-          <video autoPlay
+          {/* <video autoPlay
             loop
             muted
             className=" "
@@ -54,8 +54,9 @@ export default function Home() {
               zIndex: "-1"
             }}
           >
-            <source src={MainV3} type="video/mp4" />
-          </video>
+            <source src={"https://player.vimeo.com/video/491643316?"} type="video/mp4" />
+          </video> */}
+          <iframe src="https://player.vimeo.com/video/491643316?autoplay=1&loop=1&autopause=0&api=1&controls=0&muted=1?playsinline=0" width="1000px" height="700px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Dunnwood 4K_12-15-20"></iframe>
 
 
         </div>
