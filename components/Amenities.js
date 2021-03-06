@@ -4,9 +4,15 @@ import { imgArray, paragArray } from "./data/amenities"
 
 
 
+
+
 const Amenities = () => {
 
+    const LoaderImg = "/Fountain.gif"
+
     const [open, setOpen] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [choosedImg, setChoosedImg] = useState(imgArray[0])
 
     return (
         <div className="flex flex-col  items-center "  >
@@ -24,16 +30,23 @@ const Amenities = () => {
                     ))}
                 </div>
                 <div>
-                    <div className={` ${open ? 'bg-gray-200 opacity-70  z-10   fixed top-0 right-0 left-0 bottom-0 transition ease-in duration-150 ' : ''} `} > </div>
+                    <div className={` ${open ? 'bg-gray-200 opacity-70  z-10   fixed top-0 right-0 left-0 bottom-0 transition ease-in duration-300 ' : ''} `} > </div>
 
                     <div className={`  ${open ? " flex flex-col items-center " : ""}`}>
-                        <div className={`${open ? 'fixed top-2  z-50' : 'hidden'}`} onClick={() => setOpen(false)}> X</div>
-                        <div className={`${open ? 'shadow-2xl fixed top-8 right-0 left-0 h-60  md:h-4/5 w-full mx-20 mt-10  z-50 p-7  transition ease-in duration-300 delay-150  flex flex-col items-center space-y-7 bg-white ' : 'hidden'}`}>
+
+                        <button className={`${open ? 'fixed top-9 hover:text-gray-400   right-5    z-50 text-2xl  font-bold border-2 px-2 border-gray-600 ' : 'hidden'}`} onClick={() => setOpen(false)}> X</button>
+                        <div className={`${open ? 'shadow-2xl fixed top-10 right-0 left-0 mx-3 h-72  md:h-4/5 mt-10  z-50 p-7  transition ease-in duration-400 delay-150 border-2  border-gray-500 rounded   space-y-7 bg-white ' : 'hidden'}`}>
 
 
-                            <Image src={imgArray[0]} className="  " layout="fill" quality={100} />
+                            {
 
+                                loading ?
 
+                                    <Image src="/Fountain.gif" width="100" className="" height="20" />
+                                    :
+                                    <Image src={choosedImg} className="  " layout="fill" quality={100} />
+
+                            }
 
 
 
@@ -45,7 +58,7 @@ const Amenities = () => {
                 <div className="flex flex-wrap  md:hidden md:w-1/2 gap-7">
                     {
                         imgArray.map(Img => (
-                            <Image src={Img} onClick={() => setOpen(true)} className="w-20 cursor-pointer" width="430" quality={1} height="240" priority />
+                            <Image src={Img} onClick={() => { setLoading(true); setTimeout(() => setLoading(false), 1500); setChoosedImg(Img); setOpen(true) }} className="w-20 cursor-pointer" width="430" quality={1} height="240" priority />
 
                         ))
                     }
@@ -56,7 +69,7 @@ const Amenities = () => {
                 <div className=" hidden md:flex flex-wrap    md:w-1/2 gap-7">
                     {
                         imgArray.map(Img => (
-                            <Image onClick={() => setOpen(true)} src={Img} className="w-20 cursor-pointer" width="280" quality={1} height="150" priority />
+                            <Image src={Img} onClick={() => { setLoading(true); setTimeout(() => setLoading(false), 1500); setChoosedImg(Img); setOpen(true) }} className="w-20 cursor-pointer" width="280" quality={1} height="150" priority />
 
                         ))
                     }

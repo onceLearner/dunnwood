@@ -62,7 +62,7 @@ export default function Home() {
 
 
         <div ref={OverviewRef} className="flex  flex-col  transform -translate-y-10  space-y-2 p-7 md:px-12 mt-12 ">
-          <h2 className="  mb-2 md:mb-7 text-gray-800 ">
+          <h2 className="  mb-2 md:mb-7 text-3xl text-gray-800 " style={{ fontFamily: "Belleza" }}>
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
 
