@@ -45,6 +45,9 @@ export default function Home() {
             <source src={MainV3} type="video/mp4" />
           </video>
         </div>
+        <div className=" w-full z-50 transform  h-24 -translate-y-40 bg-white">
+
+        </div>
 
         <div className="flex  flex-col   space-y-2 p-7 md:px-12 ">
           <h2 className="text-2xl font-semibold mb-2 md:mb-7 text-gray-800">
