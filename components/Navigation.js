@@ -49,13 +49,13 @@ const Navigation = (props) => {
 
                 </div>
                 <div className={visble ? `z-10 absolute bg-black right-0 left-0 top-0 h-screen  p-2 ` : `hidden`}>
-                    <p className="p-4 absolute right-0 text-gray-100 text-lg font-bold cursor-pointer " onClick={() => setVisible(false)}>x </p>
+                    <p className="p-6  absolute right-5 text-gray-100 text-xl font-bold cursor-pointer " onClick={() => setVisible(false)}>x </p>
 
                     <div className="flex flex-col justify-center items-center gap-6 mt-40 ">
                         {tabs.map(tab =>
 
                             <a key={tab} onClick={() => { handleBackClick(props.refs.find(elt => elt.tabName == tab)); setVisible(false) }}>
-                                <button className={` text-gray-100 hover:text-red-500 focus:outline-none transition duration-150   text-3xl  font-extrabold cursor-pointer   `} style={{ fontFamily: "Montserrat" }}> {tab}</button>
+                                <button className={` text-gray-100 hover:text-red-500 focus:outline-none transition duration-150   text-3xl  font-extrabold cursor-pointer   `} style={{ fontFamily: "Belleza", fontSize: " 32px", fontWeight: "700" }}> {tab}</button>
                             </a>
 
                         )}

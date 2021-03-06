@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react"
 import Head from 'next/head'
 import Image from "next/image"
+
 import Amenities from '../components/Amenities'
 import FooterHigh from '../components/FooterHigh'
 import FooterLow from '../components/FooterLow'
@@ -11,11 +12,21 @@ import MainV2 from "../public/mainsd2.mp4"
 import MainV3 from "../public/mainv11.mp4"
 import MainV4 from "../public/mainv112.mp4"
 import { imgArray } from "../components/data/amenities"
+import AnimatedCursor from "react-animated-cursor"
+
+
+
+
+
+
+
 
 
 
 
 export default function Home() {
+
+
   const OverviewRef = useRef()
   const NeighboorhoodRef = useRef()
   const AmenitiesRef = useRef()
@@ -31,12 +42,24 @@ export default function Home() {
       <Head>
         <title> DunnwooGreen</title>
         <link rel="icon" href="/favicon.ico" />
+
+
       </Head>
+
       <nav className="w-full">
         <Navigation refs={arrRef} />
       </nav>
 
       <main className={styles.main}>
+        <AnimatedCursor
+          innerSize={10}
+          outerSize={8}
+          color='193, 192, 111'
+          outerAlpha={0.8}
+          innerScale={0.2}
+          outerScale={10}
+        />
+
         <div className="     border-purple-700 w-full    bg-black bg-opacity-30" style={{ height: "92vh" }}>
           <video
 
