@@ -11,6 +11,7 @@ import MainV1 from "../public/mainsd.mp4"
 import MainV2 from "../public/mainsd2.mp4"
 import MainV3 from "../public/mainv11.mp4"
 import MainV4 from "../public/mainv112.mp4"
+import MainV5 from "../public/mainv21.mp4"
 import { imgArray } from "../components/data/amenities"
 import { magicMouse } from "../lib/magic_mouse"
 
@@ -75,7 +76,7 @@ export default function Home() {
         <div className="     border-purple-700 w-full    bg-black bg-opacity-30" style={{ height: "97vh" }}>
           <video
 
-            autoplay="autoplay"
+            autoPlay
             loop
             muted
 
@@ -93,7 +94,7 @@ export default function Home() {
               zIndex: "-1"
             }}
           >
-            <source src={MainV4} type="video/mp4" />
+            <source src={MainV5} type="video/mp4" />
 
 
           </video>

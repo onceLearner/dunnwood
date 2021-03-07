@@ -55,11 +55,12 @@ const Amenities = () => {
 
                     </div>
                 </div>
-                <div className="flex flex-wrap  md:hidden md:w-1/2 gap-7">
+                <div className="flex flex-col  md:hidden space-y-6 mt-2      ">
                     {
                         imgArray.map(Img => (
-                            <Image src={Img} onClick={() => { setLoading(true); setTimeout(() => setLoading(false), 1500); setChoosedImg(Img); setOpen(true) }} className="w-20 cursor-pointer" width="430" quality={1} height="240" priority />
-
+                            <div>
+                                <Image src={Img} onClick={() => { setLoading(true); setTimeout(() => setLoading(false), 1500); setChoosedImg(Img); setOpen(true) }} className=" cursor-pointer" width="430" quality={1} height="240" priority />
+                            </div>
                         ))
                     }
 
