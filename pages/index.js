@@ -39,6 +39,7 @@ export default function Home() {
       "outerHeight": 30
     };
     magicMouse(options)
+
   }, [])
 
 
@@ -68,7 +69,7 @@ export default function Home() {
       <main className={styles.main}>
 
 
-        <div className="     border-purple-700 w-full    bg-black bg-opacity-30" style={{ height: "92vh" }}>
+        <div className="     border-purple-700 w-full    bg-black bg-opacity-30" style={{ height: "97vh" }}>
           <video
 
             autoplay="autoplay"
@@ -78,8 +79,8 @@ export default function Home() {
             style={{
 
               position: "relative",
-              width: "100%",
-              height: "100vh",
+              width: "105%",
+              height: "105vh",
               overflow: "hidden",
               left: "0",
               top: "0",
@@ -91,14 +92,17 @@ export default function Home() {
           >
             <source src={MainV4} type="video/mp4" />
 
+
           </video>
           {/* <iframe className="w-full h-full" src="https://www.youtube.com/embed/Cjeu-YZA9c4?autoplay=1&showinfo=0&controls=0"></iframe> */}
+          <div className="absolute bottom-1 h-20 w-full bg-white ">
 
+          </div>
 
         </div>
 
 
-        <div ref={OverviewRef} className="flex  flex-col   transform -translate-y-10  space-y-2 p-7 md:px-12 mt-40 ">
+        <div ref={OverviewRef} className="flex  flex-col   transform -translate-y-10  space-y-2 p-7 md:px-12 mt-20 ">
           <h2 className="  mb-2 md:mb-7 text-3xl text-gray-800 " style={{ fontFamily: "Belleza" }}>
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
