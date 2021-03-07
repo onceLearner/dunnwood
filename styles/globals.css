@@ -9,6 +9,7 @@ html{
 
 }
 
+@media only screen and (min-width: 600px) {
 
 
 body #magicMouseCursor {
@@ -55,6 +56,7 @@ body #magicMouseCursor {
     body .magic-hover:hover {
       cursor: none; }
 
+    }
 
 
 

@@ -74,7 +74,7 @@ export default function Home() {
             autoplay="autoplay"
             loop
             muted
-            poster={imgArray[0]}
+
             style={{
 
               position: "relative",
@@ -102,7 +102,6 @@ export default function Home() {
           <h2 className="  mb-2 md:mb-7 text-3xl text-gray-800 " style={{ fontFamily: "Belleza" }}>
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
-          <p id="test"> tesssssssssss</p>
 
           <p className="text-black  leading-6" style={{ fontSize: "12pt", fontWeight: "300   " }}>
             Morrell Builders is thrilled to announce our newest project! Dunnwood Green will provide the same quality, value and innovation Rochester home buyers have revered for three generations. Three luxury buildings offering single and multiple bedroom residences surrounded by a golf course and wooded trails.  A community club house featuring your favorite coffee bar, a beloved pub, a comfy library, and a state-of-the-art fitness center. Our goal is to energize and elevate your lifestyle.
