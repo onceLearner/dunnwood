@@ -134,11 +134,7 @@ export default function Home() {
             <p className="text-center text-lg font-light">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
           </div>
 
-          {/* <div className=" flex flex-col items-center space-y-4  absolute top-1/3 left-12 md:left-72 text-white ">
-            <h3 className="text-xl md:text-6xl " style={{ fontFamily: "Belleza" }}>NEIGHBORHOOD</h3>
-            <p className="text-lg">IN THE HEART OF ROCHESTER-SURROUNDED BY</p>
-            <p className="text-center text-lg">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
-          </div> */}
+
 
         </div>
 
