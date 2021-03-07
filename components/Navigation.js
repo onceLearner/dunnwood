@@ -23,9 +23,7 @@ const Navigation = (props) => {
     return (
         <div className="flex-0 flex fixed z-10 top-0 w-full    justify-between items-center   pr-10 pt-2  ">
 
-
-            <Image onClick={() => olscrlToElement()} src="/logo.png" width="130" className="cursor-pointer" height="100" layout="intrinsic" priority />
-
+            <Image onClick={() => olscrlToElement()} src="/logo.png" className="cursor-pointer " width={process.browser && window.screen.width > 600 ? 140 : 90} height={process.browser && window.screen.width > 600 ? 110 : 70} layout="intrinsic" priority />
 
             <div>
                 <ul className=" md:flex   gap-12 hidden     ">
