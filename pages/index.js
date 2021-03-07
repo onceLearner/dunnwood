@@ -12,7 +12,10 @@ import MainV2 from "../public/mainsd2.mp4"
 import MainV3 from "../public/mainv11.mp4"
 import MainV4 from "../public/mainv112.mp4"
 import { imgArray } from "../components/data/amenities"
-import AnimatedCursor from "react-animated-cursor"
+import { magicMouse } from "../lib/magic_mouse"
+
+
+
 
 
 
@@ -25,6 +28,18 @@ import AnimatedCursor from "react-animated-cursor"
 
 
 export default function Home() {
+
+  useEffect(() => {
+    const options = {
+      "cursorOuter": "circle-basic",
+      "hoverEffect": "pointer-blur",
+      "hoverItemMove": true,
+      "defaultCursor": true,
+      "outerWidth": 30,
+      "outerHeight": 30
+    };
+    magicMouse(options)
+  }, [])
 
 
   const OverviewRef = useRef()
@@ -43,22 +58,15 @@ export default function Home() {
         <title> DunnwooGreen</title>
         <link rel="icon" href="/favicon.ico" />
 
-
       </Head>
+
 
       <nav className="w-full">
         <Navigation refs={arrRef} />
       </nav>
 
       <main className={styles.main}>
-        <AnimatedCursor
-          innerSize={10}
-          outerSize={8}
-          color='193, 192, 111'
-          outerAlpha={0.8}
-          innerScale={0.2}
-          outerScale={10}
-        />
+
 
         <div className="     border-purple-700 w-full    bg-black bg-opacity-30" style={{ height: "92vh" }}>
           <video
@@ -94,6 +102,7 @@ export default function Home() {
           <h2 className="  mb-2 md:mb-7 text-3xl text-gray-800 " style={{ fontFamily: "Belleza" }}>
             DUNNWOOD GREEN-LUXURY APARTMENTS
           </h2>
+          <p id="test"> tesssssssssss</p>
 
           <p className="text-black  leading-6" style={{ fontSize: "12pt", fontWeight: "300   " }}>
             Morrell Builders is thrilled to announce our newest project! Dunnwood Green will provide the same quality, value and innovation Rochester home buyers have revered for three generations. Three luxury buildings offering single and multiple bedroom residences surrounded by a golf course and wooded trails.  A community club house featuring your favorite coffee bar, a beloved pub, a comfy library, and a state-of-the-art fitness center. Our goal is to energize and elevate your lifestyle.
@@ -126,6 +135,12 @@ export default function Home() {
           <Amenities />
         </div>
       </main>
+      <div id="magic-cursor" >
+        <div id="ball">
+          <div id="hold-event"></div>
+          <div id="ball-loader"></div>
+        </div>
+      </div>
 
       <footer ref={ContactREf} className={styles.footer} id="AMENITIES">
 
@@ -134,6 +149,8 @@ export default function Home() {
 
 
       </footer>
+
+
     </div >
   )
 }

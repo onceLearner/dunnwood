@@ -16,6 +16,7 @@ function handleBackClick(ref) {
 
 const Navigation = (props) => {
     const [visble, setVisible] = React.useState(false)
+    const [isHover, setIsHover] = React.useState(false)
 
 
 
@@ -27,21 +28,21 @@ const Navigation = (props) => {
 
 
             <div>
-                <nav className=" md:flex   gap-12 hidden    ">
+                <ul className=" md:flex   gap-12 hidden     ">
 
 
 
                     {tabs.map(tab =>
 
-                        <tab key={tab} onClick={() => { handleBackClick(props.refs.find(elt => elt.tabName == tab)) }}  >
-                            <button className={` text-gray-100 hover:text-white  focus:outline-none transition duration-150    font-medium cursor-pointer    `} style={{ fontFamily: "Belleza", fontSize: " 18px", fontWeight: "700" }}> {tab}</button>
-                        </tab>
+                        <a>
+                            <span id="navItem" key={tab} onClick={() => { handleBackClick(props.refs.find(elt => elt.tabName == tab)) }} onMouseOver={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className={` ${isHover ? ' opacity-40 hover:opacity-95' : ' '}  text-gray-100  hover:opacity-20       focus:outline-none transition duration-200      cursor-pointer    `} style={{ fontFamily: "Belleza", fontSize: " 18px", fontWeight: "700", transform: [{ rotate: '180deg' }] }}> {tab}</span>
 
+                        </a>
                     )}
 
 
 
-                </nav>
+                </ul>
                 <div className="md:hidden cursor-pointer mr-4 hover:text-red-500" onClick={() => setVisible(true)}>
                     <svg className="h-7 w-7 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
@@ -55,7 +56,7 @@ const Navigation = (props) => {
                         {tabs.map(tab =>
 
                             <a key={tab} onClick={() => { handleBackClick(props.refs.find(elt => elt.tabName == tab)); setVisible(false) }}>
-                                <button className={` text-gray-100 hover:text-red-500 focus:outline-none transition duration-150   text-3xl  font-extrabold cursor-pointer   `} style={{ fontFamily: "Belleza", fontSize: " 32px", fontWeight: "700" }}> {tab}</button>
+                                <button className={`   text-gray-100 hover:text-red-500 focus:outline-none transition duration-150   text-3xl  font-extrabold cursor-pointer   `} style={{ fontFamily: "Belleza", fontSize: " 32px", fontWeight: "700" }}> {tab}</button>
                             </a>
 
                         )}
