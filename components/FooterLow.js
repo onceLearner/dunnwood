@@ -1,6 +1,12 @@
 import React from 'react'
 
-const FooterLow = () => {
+
+function handleBackClick(ref) {
+    console.log(ref)
+    ref.current.scrollIntoView({ behavior: 'smooth' })
+}
+
+const FooterLow = (props) => {
     return (
         <div className="flex flex-col space-y-20  p-4   w-full" style={{ backgroundColor: "	#0e1111" }}  >
             <div className="flex flex-wrap space-y-9   justify-between mt-10">
@@ -17,7 +23,25 @@ const FooterLow = () => {
 
             </div>
             </div>
-            <div className="copyright text-sm font-bold py-6 text-gray-100">2020 Copyright <a target="_blank" href="https://dunnwoodgreen.com">Dunnwood Green</a>
+            <div className="flex flex-col  ">
+                <div className="copyright text-sm font-bold py-6 text-gray-100">2020 Copyright
+            
+                   <a target="_blank" href="https://dunnwoodgreen.com">Dunnwood Green</a>
+                   </div>
+                  
+                  
+                   <svg  onClick={()=>handleBackClick(props.videoRef)} className="text-white w-6 h-6 ml-16 mt-3 cursor-pointer hover:text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                   </svg>
+
+                    
+                    
+                
+            </div>
+            <div className="h-6 w-6 text-white">
+               
+
             </div>
 
 

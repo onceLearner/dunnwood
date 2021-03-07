@@ -47,6 +47,7 @@ export default function Home() {
   }, [])
 
 
+  const VideoRef = useRef()
   const OverviewRef = useRef()
   const NeighboorhoodRef = useRef()
   const AmenitiesRef = useRef()
@@ -73,7 +74,8 @@ export default function Home() {
       <main className={styles.main}>
 
 
-        <div className="     border-purple-700 w-full    bg-black bg-opacity-30" style={{ height: "97vh" }}>
+        <div ref={VideoRef} className="  relative overflow-hidden    border-purple-700 w-full    bg-black bg-opacity-30" style={{ height: "92vh" }}>
+
           <video
 
             autoPlay
@@ -83,13 +85,14 @@ export default function Home() {
             style={{
 
               position: "relative",
-              width: "105%",
-              height: "105vh",
+              width: "100%",
+              height: "110vh",
               overflow: "hidden",
               left: "0",
               top: "0",
+              bottom: "0",
               padding: "none",
-              objectFit: "cover",
+              objectFit: "cover ",
               transform: "translate(-0%,-8%)",
               zIndex: "-1"
             }}
@@ -99,9 +102,7 @@ export default function Home() {
 
           </video>
           {/* <iframe className="w-full h-full" src="https://www.youtube.com/embed/Cjeu-YZA9c4?autoplay=1&showinfo=0&controls=0"></iframe> */}
-          <div className="   w-full bg-white ">
 
-          </div>
 
         </div>
 
@@ -154,7 +155,7 @@ export default function Home() {
       <footer ref={ContactREf} className="flex flex-col   w-full" id="AMENITIES">
 
         <FooterHigh />
-        <FooterLow />
+        <FooterLow videoRef={VideoRef} />
 
 
       </footer>
