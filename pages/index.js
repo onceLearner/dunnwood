@@ -38,7 +38,10 @@ export default function Home() {
       "outerWidth": 30,
       "outerHeight": 30
     };
-    magicMouse(options)
+    if (process.browser)
+      if (window.screen.width > 600) {
+        magicMouse(options)
+      }
 
   }, [])
 
@@ -115,7 +118,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div ref={NeighboorhoodRef} className="  relative  w-full   mb-6     " style={{ height: "92vh" }}>
+        <div ref={NeighboorhoodRef} className="  flex flex-col items-end relative  w-full   mb-6     " style={{ height: "92vh" }}>
           <Image
             className="  "
             alt="Mountains"
@@ -125,11 +128,17 @@ export default function Home() {
             quality={70}
             priority
           />
-          <div className=" flex flex-col items-center space-y-4  absolute top-1/3 left-12 md:left-72 text-white ">
-            <h3 className="text-xl md:text-6xl " style={{ fontFamily: "Belleza" }}>NEIGHBORHOOD</h3>
+          <div className=" flex flex-col items-center   space-y-4   border-pink-600 absolute left-0 right-0 top-1/3   text-white " style={{ transform: "translate(0%,0%)", }}>
+            <h3 className="text-xl md:text-6xl text-center " style={{ fontFamily: "Belleza" }}>NEIGHBORHOOD</h3>
             <p className="text-lg">IN THE HEART OF ROCHESTER-SURROUNDED BY</p>
             <p className="text-center text-lg">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
           </div>
+
+          {/* <div className=" flex flex-col items-center space-y-4  absolute top-1/3 left-12 md:left-72 text-white ">
+            <h3 className="text-xl md:text-6xl " style={{ fontFamily: "Belleza" }}>NEIGHBORHOOD</h3>
+            <p className="text-lg">IN THE HEART OF ROCHESTER-SURROUNDED BY</p>
+            <p className="text-center text-lg">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
+          </div> */}
 
         </div>
 
@@ -145,7 +154,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer ref={ContactREf} className={styles.footer} id="AMENITIES">
+      <footer ref={ContactREf} className="flex flex-col   w-full" id="AMENITIES">
 
         <FooterHigh />
         <FooterLow />

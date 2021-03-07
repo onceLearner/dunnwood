@@ -2,7 +2,7 @@ import React from 'react'
 
 const FooterLow = () => {
     return (
-        <div className="flex flex-col space-y-20  p-4    text-white " style={{ backgroundColor: "	#0e1111" }}  >
+        <div className="flex flex-col space-y-20  p-4   w-full" style={{ backgroundColor: "	#0e1111" }}  >
             <div className="flex flex-wrap gap-10    justify-between mt-10">
                 <div className=" space-y-3 md:w-5/12      ">
                     <h3 className="text-2xl md:text-5xl" style={{ fontFamily: "Belleza" }}> CONTACT DETAILS </h3>
