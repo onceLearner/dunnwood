@@ -98,7 +98,7 @@ export default function Home() {
 
           </video>
           {/* <iframe className="w-full h-full" src="https://www.youtube.com/embed/Cjeu-YZA9c4?autoplay=1&showinfo=0&controls=0"></iframe> */}
-          <div className="absolute bottom-1 h-20 w-full bg-white ">
+          <div className="   w-full bg-white ">
 
           </div>
 
@@ -129,9 +129,9 @@ export default function Home() {
             priority
           />
           <div className=" flex flex-col items-center   space-y-4   border-pink-600 absolute left-0 right-0 top-1/3   text-white " style={{ transform: "translate(0%,0%)", }}>
-            <h3 className="text-xl md:text-6xl text-center " style={{ fontFamily: "Belleza" }}>NEIGHBORHOOD</h3>
-            <p className="text-lg">IN THE HEART OF ROCHESTER-SURROUNDED BY</p>
-            <p className="text-center text-lg">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
+            <h3 className="text-3xl md:text-6xl text-center " style={{ fontFamily: "Belleza" }}>NEIGHBORHOOD</h3>
+            <p className="text-lg font-light text-center">IN THE HEART OF ROCHESTER-SURROUNDED BY</p>
+            <p className="text-center text-lg font-light">LOCUST HILL COUNTRY CLUB,  JEFFERSON ROAD, PITTSFORD, NY</p>
           </div>
 
           {/* <div className=" flex flex-col items-center space-y-4  absolute top-1/3 left-12 md:left-72 text-white ">
