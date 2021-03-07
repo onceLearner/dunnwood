@@ -67,11 +67,12 @@ const Amenities = () => {
 
                 </div>
 
-                <div className=" hidden md:flex flex-wrap    md:w-1/2 gap-7">
+                <div className=" hidden md:flex flex-wrap   w-1/2        items-center justify-between      ">
                     {
                         imgArray.map(Img => (
-                            <Image src={Img} onClick={() => { setLoading(true); setTimeout(() => setLoading(false), 1500); setChoosedImg(Img); setOpen(true) }} className="w-20 cursor-pointer" width="280" quality={1} height="150" priority />
-
+                            <div className="relative w-72 h-44   ">
+                                <Image src={Img} onClick={() => { setLoading(true); setTimeout(() => setLoading(false), 1500); setChoosedImg(Img); setOpen(true) }} className="" layout="fill" objectFit="cover" quality={1} priority />
+                            </div>
                         ))
                     }
 

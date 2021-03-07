@@ -21,9 +21,9 @@ const Navigation = (props) => {
 
 
     return (
-        <div className="flex-0 flex fixed z-10 top-0 w-full    justify-between items-center   pr-10 pt-2  ">
+        <div className="flex-0 flex fixed z-10 top-0 w-full    justify-between items-center   pr-10 pt-1  ">
 
-            <Image src="/logo.png" className="cursor-pointer " width={process.browser && window.screen.width > 600 ? 140 : 90} height={process.browser && window.screen.width > 600 ? 110 : 70} layout="intrinsic" priority />
+            <Image src="/logo.png" className="cursor-pointer " width={process.browser && window.screen.width > 600 ? 135 : 90} height={process.browser && window.screen.width > 600 ? 105 : 70} layout="intrinsic" quality={100} priority />
 
             <div>
                 <ul className=" md:flex   gap-12 hidden     ">
