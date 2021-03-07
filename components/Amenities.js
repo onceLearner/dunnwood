@@ -71,7 +71,7 @@ const Amenities = () => {
                     {
                         imgArray.map(Img => (
                             <div className="relative w-72 h-44   ">
-                                <Image src={Img} onClick={() => { setLoading(true); setTimeout(() => setLoading(false), 1500); setChoosedImg(Img); setOpen(true) }} className="" layout="fill" objectFit="cover" quality={1} priority />
+                                <Image src={Img} onClick={() => { setLoading(true); setTimeout(() => setLoading(false), 1500); setChoosedImg(Img); setOpen(true) }} className="cursor-pointer" layout="fill" objectFit="cover" quality={1} priority />
                             </div>
                         ))
                     }
