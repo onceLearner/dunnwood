@@ -50,7 +50,7 @@ const Navigation = (props) => {
                 <div className={visble ? `z-10 absolute bg-black right-0 left-0 top-0 h-screen  p-2 ` : `hidden`}>
                     <p className="p-6  absolute right-5 text-gray-100 text-xl font-bold cursor-pointer " onClick={() => setVisible(false)}>x </p>
 
-                    <div className="flex flex-col justify-center items-center space-y-10 mt-40 ">
+                    <div className="flex flex-col justify-center items-center space-y-8 mt-40 ">
                         {tabs.map(tab =>
 
                             <a key={tab} onClick={() => { handleBackClick(props.refs.find(elt => elt.tabName == tab)); setVisible(false) }}>

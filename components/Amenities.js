@@ -55,7 +55,7 @@ const Amenities = () => {
 
                     </div>
                 </div>
-                <div className="flex flex-col  md:hidden space-y-6 mt-2      ">
+                <div className="flex flex-col  md:hidden space-y-8  mt-2      ">
                     {
                         imgArray.map(Img => (
                             <div>
