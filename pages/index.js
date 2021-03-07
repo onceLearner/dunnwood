@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import Head from 'next/head'
 import Image from "next/image"
 
@@ -7,11 +7,9 @@ import FooterHigh from '../components/FooterHigh'
 import FooterLow from '../components/FooterLow'
 import Navigation from '../components/Navigation'
 import styles from '../styles/Home.module.css'
-import MainV1 from "../public/mainsd.mp4"
-import MainV2 from "../public/mainsd2.mp4"
-import MainV3 from "../public/mainv11.mp4"
-import MainV4 from "../public/mainv112.mp4"
+
 import MainV5 from "../public/mainv21.mp4"
+import Vchunk1 from "../public/vchunk1.mp4"
 import { imgArray } from "../components/data/amenities"
 import { magicMouse } from "../lib/magic_mouse"
 
@@ -30,7 +28,24 @@ import { magicMouse } from "../lib/magic_mouse"
 
 export default function Home() {
 
+
+
+
+  const VideoRef = useRef()
+  const OverviewRef = useRef()
+  const NeighboorhoodRef = useRef()
+  const AmenitiesRef = useRef()
+  const ContactREf = useRef()
+
+  const arrRef = [{ refName: OverviewRef, tabName: "OVERVIEW" }, { refName: NeighboorhoodRef, tabName: "NEIGHBORHOOD" }, { refName: AmenitiesRef, tabName: "AMENITIES" }, { refName: ContactREf, tabName: "CONTACT" }]
+
+
+
+
   useEffect(() => {
+
+
+
     const options = {
       "cursorOuter": "circle-basic",
       "hoverEffect": "pointer-blur",
@@ -47,13 +62,6 @@ export default function Home() {
   }, [])
 
 
-  const VideoRef = useRef()
-  const OverviewRef = useRef()
-  const NeighboorhoodRef = useRef()
-  const AmenitiesRef = useRef()
-  const ContactREf = useRef()
-
-  const arrRef = [{ refName: OverviewRef, tabName: "OVERVIEW" }, { refName: NeighboorhoodRef, tabName: "NEIGHBORHOOD" }, { refName: AmenitiesRef, tabName: "AMENITIES" }, { refName: ContactREf, tabName: "CONTACT" }]
 
 
 
@@ -86,7 +94,7 @@ export default function Home() {
 
               position: "relative",
               width: "100%",
-              height: "110vh",
+              height: "120%",
               overflow: "hidden",
               left: "0",
               top: "0",
