@@ -12,6 +12,7 @@ import MainV5 from "../public/mainv21.mp4"
 import Vchunk1 from "../public/vchunk1.mp4"
 import { imgArray } from "../components/data/amenities"
 import { magicMouse } from "../lib/magic_mouse"
+import Gallery from "../components/Gallery"
 
 
 
@@ -105,7 +106,7 @@ export default function Home() {
               zIndex: "-1"
             }}
           >
-            <source src={MainV5} type="video/mp4" />
+            <source src={Vchunk1} type="video/mp4" />
 
 
           </video>
@@ -114,6 +115,8 @@ export default function Home() {
 
         </div>
 
+
+        <Gallery />
 
         <div ref={OverviewRef} className="flex  flex-col   transform -translate-y-10  space-y-2 p-7 md:px-12 mt-20 ">
           <h2 className="  mb-2 md:mb-7 text-3xl text-gray-800 " style={{ fontFamily: "Belleza" }}>

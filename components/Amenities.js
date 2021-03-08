@@ -67,7 +67,7 @@ const Amenities = () => {
 
                 </div>
 
-                <div className=" hidden md:flex flex-wrap   w-1/2        items-center justify-between      ">
+                <div className=" hidden md:flex flex-wrap   w-1/2        items-center justify-between       ">
                     {
                         imgArray.map(Img => (
                             <div className="relative w-72 h-44   ">
