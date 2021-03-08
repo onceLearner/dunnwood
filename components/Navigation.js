@@ -26,7 +26,7 @@ const Navigation = (props) => {
             <Image src="/logo.png" className="cursor-pointer " width={process.browser && window.screen.width > 600 ? 135 : 90} height={process.browser && window.screen.width > 600 ? 105 : 70} layout="intrinsic" quality={100} priority />
 
             <div>
-                <ul className=" md:flex   gap-12 hidden     ">
+                <ul className=" md:flex   space-x-12 hidden     ">
 
 
 
