@@ -95,7 +95,7 @@ export default function Home() {
 
             loop
             muted
-            id="video"
+            autoPlay
 
             style={{
 
