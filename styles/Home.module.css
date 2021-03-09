@@ -15,10 +15,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fadein 1s;
-  -moz-animation: fadein 1s; /* Firefox */
-  -webkit-animation: fadein 1s; /* Safari and Chrome */
-  -o-animation: fadein 1s; /* Opera */
+  animation: opacity 1s;
+  -moz-animation: opacity 1s; /* Firefox */
+  -webkit-animation: opacity 1s; /* Safari and Chrome */
+  -o-animation: opacity 1s; /* Opera */
 }
 
 
@@ -125,6 +125,13 @@
 }
 
 
+/*
+
+change the fade in fade out of the galery images 
+
+*/
+
+
 .hide{
 opacity: 0;
 transition:  opacity 0.6s ease-out ;;
@@ -148,35 +155,3 @@ position: relative;;
 
 
 
-@keyframes trns {
-  0%{
-    opacity: 0.90;
-  }
-  
-  20%{
-    opacity: 0.88;
-  }
-  
-  40%{
-    opacity: 0.87;
-  }
-  60%{
-    opacity: 0.88;
-  }
-  
-  80%{
-    opacity: 0.92;
-  }
-  
-  90%{
-    opacity: 0.95;
-  }
-  
-
-
-  100%{
-    opacity: 1;
-
-  }
-
-}

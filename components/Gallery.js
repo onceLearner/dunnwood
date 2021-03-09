@@ -14,29 +14,6 @@ const Gallery = () => {
 
 
     const [choosedImg, setChoosedImg] = useState(titlesImgs[0].imgName)
-    // const [imgsLoaded, setImgsLoaded] = useState(false);
-
-
-    // useEffect(() => {
-    //     const loadImage = (image) => {
-    //       return new Promise((resolve, reject) => {
-    //         const loadImg = new Image();
-    //         loadImg.src = image.url;
-    //         // wait 2 seconds to simulate loading time
-    //         loadImg.onload = () =>
-    //           setTimeout(() => {
-    //             resolve(image.url);
-    //           }, 50);
-
-    //         loadImg.onerror = (err) => reject(err);
-    //       });
-    //     };
-
-    //     Promise.all(IMAGES.map((image) => loadImage(image)))
-    //       .then(() => setImgsLoaded(true))
-    //       .catch((err) => console.log("Failed to load images", err));
-    //   }, []);
-
 
 
 
@@ -50,7 +27,7 @@ const Gallery = () => {
             {
                 titlesImgs.map(tm =>
 
-                    <Image key={tm.title} style src={`/gallery/${choosedImg}`} className={`${tm.imgName === choosedImg ? styles.show : styles.hide}`} layout="fill" objectFit="cover" quality={75} loading="eager" />
+                    <Image key={tm.title} style src={`/gallery/${choosedImg}`} className={`${tm.imgName === choosedImg ? styles.show : styles.hide}`} layout="fill" objectFit="cover" quality={75} priority />
 
                 )
             }

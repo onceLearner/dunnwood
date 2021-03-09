@@ -89,7 +89,9 @@ export default function Home() {
       <main className={styles.main}>
 
 
-        <div ref={VideoRef} className="  relative overflow-hidden    border-purple-700 w-full    bg-black bg-opacity-30" style={{ height: "92vh" }}>
+        <div ref={VideoRef} className=" layer-1  relative overflow-hidden    w-full    bg-black " style={{ height: "92vh", zIndex: "-1" }}>
+
+          <div className={`layer1 absolute top-0 right-0 bottom-0 left-0 bg-black    `} style={{ zIndex: "10", opacity: "0.3" }}></div>
 
           <video
 
@@ -97,7 +99,7 @@ export default function Home() {
             loop
             muted
             autoPlay={true}
-
+            className="layer0"
             style={{
 
               position: "relative",
@@ -110,7 +112,7 @@ export default function Home() {
               padding: "none",
               objectFit: "cover ",
               transform: "translate(-0%,-8%)",
-              zIndex: "-1"
+
             }}
           >
             <source src={MainV5} type="video/mp4" />
