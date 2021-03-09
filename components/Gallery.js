@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from "next/image"
 import { titlesImgs } from './data/Gallery'
 
@@ -9,10 +9,39 @@ import styles from '../styles/Home.module.css'
 
 const Gallery = () => {
 
-    const [choosedImg, setChoosedImg] = React.useState(titlesImgs[0].imgName)
+
+
+
+
+    const [choosedImg, setChoosedImg] = useState(titlesImgs[0].imgName)
+    // const [imgsLoaded, setImgsLoaded] = useState(false);
+
+
+    // useEffect(() => {
+    //     const loadImage = (image) => {
+    //       return new Promise((resolve, reject) => {
+    //         const loadImg = new Image();
+    //         loadImg.src = image.url;
+    //         // wait 2 seconds to simulate loading time
+    //         loadImg.onload = () =>
+    //           setTimeout(() => {
+    //             resolve(image.url);
+    //           }, 50);
+
+    //         loadImg.onerror = (err) => reject(err);
+    //       });
+    //     };
+
+    //     Promise.all(IMAGES.map((image) => loadImage(image)))
+    //       .then(() => setImgsLoaded(true))
+    //       .catch((err) => console.log("Failed to load images", err));
+    //   }, []);
+
+
+
 
     return (
-        <div className=" w-full h-screen   relative flex flex-col mt-20" style={{ fontFamily: "Belleza" }}>
+        <div className=" w-full bg-gray-900 h-screen   relative flex flex-col mt-20" style={{ fontFamily: "Belleza" }}>
             <div className={` absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-r from-black to-gray-100 ${styles.bgImg}`} style={{ zIndex: "10", opacity: "0.67" }}>
             </div>
 
