@@ -13,7 +13,7 @@ const Gallery = () => {
 
     return (
         <div className=" w-full h-screen   relative flex flex-col mt-20" style={{ fontFamily: "Belleza" }}>
-            <div className=" absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-r from-black to-white opacity-20  " style={{ zIndex: "10" }}>
+            <div className=" absolute top-0 right-0 bottom-0 left-0 bg-gradient-to-r from-black to-gray-100 opacity-30  " style={{ zIndex: "10" }}>
             </div>
 
 
