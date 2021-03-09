@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from "react"
 import Head from 'next/head'
 import Image from "next/image"
+import dynamic from "next/dynamic"
+
 
 import Amenities from '../components/Amenities'
 import FooterHigh from '../components/FooterHigh'
@@ -9,8 +11,7 @@ import Navigation from '../components/Navigation'
 import styles from '../styles/Home.module.css'
 
 import MainV5 from "../public/mainv21.mp4"
-import Vchunk1 from "../public/vchunk1.mp4"
-import { imgArray } from "../components/data/amenities"
+// import Vchunk1 from "../public/vchunk1.mp4"
 import { magicMouse } from "../lib/magic_mouse"
 import Gallery from "../components/Gallery"
 
@@ -55,10 +56,16 @@ export default function Home() {
       "outerWidth": 30,
       "outerHeight": 30
     };
-    if (process.browser)
+    if (process.browser) {
+
       if (window.screen.width > 600) {
         magicMouse(options)
       }
+      window.addEventListener("load", () => {
+        window.document.getElementById("video").play()
+
+      })
+    }
 
   }, [])
 
@@ -87,9 +94,10 @@ export default function Home() {
 
           <video
 
-            autoPlay
+
             loop
             muted
+            id="video"
 
             style={{
 
@@ -106,7 +114,7 @@ export default function Home() {
               zIndex: "-1"
             }}
           >
-            <source src={Vchunk1} type="video/mp4" />
+            <source src={MainV5} type="video/mp4" />
 
 
           </video>
