@@ -10,10 +10,11 @@ import FooterLow from '../components/FooterLow'
 import Navigation from '../components/Navigation'
 import styles from '../styles/Home.module.css'
 
+import Gallery from "../components/Gallery"
 import MainV5 from "../public/mainv21.mp4"
 // import Vchunk1 from "../public/vchunk1.mp4"
 import { magicMouse } from "../lib/magic_mouse"
-import Gallery from "../components/Gallery"
+
 
 
 
@@ -61,10 +62,7 @@ export default function Home() {
       if (window.screen.width > 600) {
         magicMouse(options)
       }
-      window.addEventListener("load", () => {
-        window.document.getElementById("video").play()
 
-      })
     }
 
   }, [])
