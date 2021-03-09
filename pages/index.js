@@ -4,14 +4,15 @@ import Image from "next/image"
 import dynamic from "next/dynamic"
 
 
+import Gallery from "../components/Gallery"
 import Amenities from '../components/Amenities'
 import FooterHigh from '../components/FooterHigh'
 import FooterLow from '../components/FooterLow'
 import Navigation from '../components/Navigation'
 import styles from '../styles/Home.module.css'
 
-import Gallery from "../components/Gallery"
-// import MainV5 from "../public/mainv21.mp4"
+
+import MainV5 from "../public/mainv21.mp4"
 // import Vchunk1 from "../public/vchunk1.mp4"
 import { magicMouse } from "../lib/magic_mouse"
 
@@ -112,7 +113,7 @@ export default function Home() {
               zIndex: "-1"
             }}
           >
-            {/* <source src={MainV5} type="video/mp4" /> */}
+            <source src={MainV5} type="video/mp4" />
 
 
           </video>
