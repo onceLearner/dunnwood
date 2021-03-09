@@ -127,11 +127,12 @@
 
 .iconContainer{
 opacity: 0;
+animation:  opacity 0.5s ease-out ;;
 
 }
 
 .show{
-  animation:  trns 0.5s step-end ;;
+  animation:  opacity 0.5s ease-in ;;
 opacity: 1;
 position: relative;;
 
